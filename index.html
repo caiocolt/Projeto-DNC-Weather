@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNC-Weather</title>
+    <!--BootStrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="./src/css/style.css">
+
+</head>
+
+<body>
+    <div class="container ">
+            <nav class="navbar navbar-expand-lg bg-info">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">DncWeather</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0"></li>
+                    </ul>
+                    <span class="navbar-text">
+                        Endereços Previsão do Tempo
+                    </span>
+                  </div>
+                </div>
+              </nav>
+        
+          <div id="head">
+            <div class="text-nuvem">
+                <h2>Descubra Mais com Precisão: <br> Previsões do Tempo e endereços <br>  
+                em tempo real.</h2>
+                <img src="./src/imagens/nuvem.svg" alt="">
+            </div>
+    
+            <div id="formulario">
+                <form id="informaçao">
+                    <label>Primeiro Nome:</label>
+                    <p><input placeholder="Digite seu nome" type="text"></p>
+                    <label>E-mail:</label> <br> 
+                    <p><input placeholder="Digite seu E-mail" type="text"></p>
+                    <label>Digite o CEP:</label> <br> 
+                    <p><input id="cep" placeholder="Digite seu CEP" type="text"></p>
+                    <label>Digite a latitude e a longitude para saber a previsão:</label> <br> 
+                    <input id="latitude" class="dados" type="text" placeholder="latitude">
+                    <input id="longitude"  class="dados" type="text" placeholder="longitude">
+                    <BR></BR>
+                    <button type="button" id="botao" onclick="buscarEndereco(); buscarPrevisao();"> ACESSAR </button>
+                </form>
+            </div>
+    
+            <div class="text-nuvem">
+                <h2>Resultado da busca por CEP: <img src="./src/imagens/location.svg" alt=""></h2>
+            </div>
+    
+            <div id="fundo-azul" class="parte3" class="bg-primary container text-center">
+                <div class="row">
+                  <div class="col">
+                    Logradouro/Nome
+                  </div>
+                  <div class="col order-">
+                    Bairro/Distrito
+                  </div>
+                  <div class="col order-">
+                    Localidade/UF
+                  </div>
+                </div>
+              </div>
+    
+              <div id="fundo-branco" class="parte3" class=" bg-light container text-center">
+                <div class="row">
+                  <div class="col" id="rua">
+                    
+                  </div>
+                  <div class="col order-" id="bairro">
+                    
+                  </div>
+                  <div class="col order-" id="cidade">
+                    
+                  </div>
+                </div>
+              </div>
+    
+    
+            <div id="footer">
+                <h3>Previsão do tempo na região: <img src="./src/imagens/nuvem2.svg" alt=""></h3>
+    
+                <input type="text" value="previsão do tempo de acordo com a Região">
+
+                <div id="respostaPrevisao">
+                  <div id="respostaHTML">
+                    
+                  </div>
+                </div>
+            </div>
+
+            <div id="end">
+              <div id="previsao">
+              <h3>Temos de uso | Política de Privacidade</h3>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
